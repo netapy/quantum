@@ -25,10 +25,11 @@
             min-width: 100%;
             min-height: 100%;
             z-index: 1;
+
         }
 
         .titrAnimal {
-            font-size: 6.5rem;
+            font-size: 5.5rem;
             font-weight: bold;
         }
 
@@ -47,7 +48,7 @@
         }
 
         #countdown {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
     </style>
 
@@ -55,15 +56,14 @@
         <source src="fond_animalerievip_compr.mp4" type="video/mp4">
     </video>
 
-    <div class="d-flex justify-content-center align-items-center flex-column h-100 w-100" style="z-index: 99; background: rgba(0, 0, 0, 0.5);    position: fixed;
-    bottom: 0;">
-        <div class="text-center" style="color: white; margin-bottom: 100px;">
+    <div class="d-flex justify-content-center align-items-center flex-column h-100 w-100" style="z-index: 99; background: #ffffff15; position: fixed; bottom: 0;">
+        <div class="text-center" style="color: white; margin-bottom: 80px;">
             <h1 class="titrAnimal">L'ANIMALERIE #2</h1>
-            <h2 class="sousTitrAnimal">Circus Party</h2>
+            <!-- <h2 class="sousTitrAnimal">?</h2>
             <div style="width: 100%; padding: auto;">
                 <hr class="my-5" style="height: 2px; color: rgb(99, 99, 99); max-width: 400px; margin: auto;">
-            </div>
-            <p id="countdown"></p>
+            </div> -->
+            <p id="countdown" style="opacity: 0; transition: all 1.5s ease-in-out;">aaa</p>
         </div>
     </div>
 
@@ -78,6 +78,7 @@
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
             document.getElementById("countdown").innerHTML = days + "j " + hours + "h " +
                 minutes + "m " + seconds + "s ";
+            document.getElementById("countdown").style.opacity = .9;
             if (distance < 0) {
                 clearInterval(x);
                 document.getElementById("countdown").innerHTML = "- - -";
