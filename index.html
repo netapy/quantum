@@ -73,7 +73,7 @@
     <div class="d-flex justify-content-center align-items-center flex-column h-100 w-100"
         style="z-index: 99; background: #ffffff15; position: fixed; bottom: 0;">
         <div class="text-center" style="color: white; margin-bottom: 20px;">
-            <h1 class="titrAnimal">L'ANIMALERIE #2</h1>
+            <h1 class="titrAnimal">L'ANIMALERIE</h1>
             <!-- <h2 class="sousTitrAnimal">?</h2> -->
 
             <p id="countdown" style="opacity: 0; transition: all 1.5s ease-in-out;">aaa</p>
@@ -82,9 +82,11 @@
                 <hr class="my-5" style="height: 2px; color: rgb(99, 99, 99); max-width: 400px; margin: auto;">
             </div>
 
+            <!--
             <div data-custom-open="modal-2" class="btnInfo">
                 Informations
             </div>
+        -->
 
             <div data-custom-open="modal-1" class="btnInfo">
                 Ajout playlist
@@ -102,11 +104,13 @@
                         style="padding: 50px 10px;">
                         <h5 class="mb-4">Infos pratiques pour A#2 :</h5>
                         <div style="text-align: left !important;">
-                            <div class="my-3">🏚️ <a href="https://goo.gl/maps/aqK7TinGbF9oBcSN9">29 Boulevard Exelmans 75016</a></div>
-                            <div class="my-3">🔒 Code de l'immeuble : <i>A6405</i> <br>interphone : <i>Arbarétier, Espagnès, Roquette</i> <br>5ème étage gauche</div>
-                            <div class="my-3">🍸 Hards, vins, bières... sont les bienvenus.</div>    
+                            <div class="my-3">🏚️ <a href="https://goo.gl/maps/aqK7TinGbF9oBcSN9">29 Boulevard Exelmans
+                                    75016</a></div>
+                            <div class="my-3">🔒 Code de l'immeuble : <i>A6405</i> <br>interphone : <i>Arbarétier,
+                                    Espagnès, Roquette</i> <br>5ème étage gauche</div>
+                            <div class="my-3">🍸 Hards, vins, bières... sont les bienvenus.</div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -206,7 +210,7 @@
             document.getElementById("countdown").style.opacity = .9;
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("countdown").innerHTML = "- - -";
+                document.getElementById("countdown").innerHTML = "Coming soon";
             }
         }, 1000);
     </script>
