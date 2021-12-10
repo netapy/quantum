@@ -39,7 +39,7 @@
             min-width: 100%;
             min-height: 100%;
             z-index: 1;
-            opacity: .8;
+            opacity: .2;
         }
 
         .titrAnimal {
@@ -49,6 +49,7 @@
 
         .sousTitrAnimal {
             opacity: .9;
+            margin-bottom: 30px;
         }
 
         @media screen and (max-width : 500px) {
@@ -63,6 +64,22 @@
 
         #countdown {
             font-size: 1.2rem;
+        }
+
+        .iconLogistique {
+            filter: invert(100%);
+        }
+
+        .ecritureLogi {
+            padding: 15px 0px;
+            font-size: 14px;
+        }
+        .btnIconQtn{
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+        }
+        .btnIconQtn:hover {
+            transform: scale(1.03);
         }
     </style>
 
@@ -88,13 +105,40 @@
             </div>
         -->
 
-            <div data-custom-open="modal-1" class="btnInfo">
-                Ajout playlist
-            </div>
-
-            <div class="btnInfo" style="font-size: 1rem; padding: 15px 0px;">
-                <a style="color: white; text-decoration: none;"
-                    href="mailto:contact@yesterday2022.com">contact@yesterday2022.com</a>
+            <div class="container" style="padding : 30px 0px">
+                <div class="row">
+                    <div class="col-4 mb-5">
+                        <div data-custom-open="modal-2" class="container btnIconQtn">
+                            <img class="iconLogistique" src="icons/software_paintbrush.svg" alt="son">
+                            <div class="ecritureLogi">Concept</div>
+                        </div>
+                    </div>
+                    <div class="col-4 mb-5">
+                        <div data-custom-open="modal-3" class="container btnIconQtn">
+                            <img class="iconLogistique" src="icons/basic_compass.svg" alt="son">
+                            <div class="ecritureLogi">Accès</div>
+                        </div>
+                    </div>
+                    <div class="col-4 mb-5">
+                        <div data-custom-open="modal-1" class="container btnIconQtn">
+                            <img class="iconLogistique" src="icons/music_playlist.svg" alt="son">
+                            <div class="ecritureLogi">Playlist</div>
+                        </div>
+                    </div>
+                    <div class="col-4 mb-5">
+                        <div data-custom-open="modal-4" class="container btnIconQtn">
+                            <img class="iconLogistique" src="icons/basic_question.svg" alt="son">
+                            <div class="ecritureLogi">FAQ</div>
+                        </div>
+                    </div>
+                    <div class="col-4 mb-5">
+                        <div class="container btnIconQtn" onclick="window.location.href = 'mailto:contact@yesterday2022.com'">
+                            <img class="iconLogistique" src="icons/basic_elaboration_mail_check.svg" alt="son">
+                            <div class="ecritureLogi"><a style="color: white; text-decoration: none;"
+                                href="mailto:contact@yesterday2022.com">Contact</a></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
@@ -102,19 +146,35 @@
                 <div class="modal__overlay" tabindex="-1" data-custom-close="modal-2">
                     <div class="modal__container mx-2" role="dialog" aria-modal="true" aria-labelledby="modal-2-title"
                         style="padding: 50px 10px;">
-                        <h5 class="mb-4">Infos pratiques pour A#2 :</h5>
+                        <h5 class="mb-4">A completer</h5>
                         <div style="text-align: left !important;">
-                            <div class="my-3">🏚️ <a href="https://goo.gl/maps/aqK7TinGbF9oBcSN9">29 Boulevard Exelmans
-                                    75016</a></div>
-                            <div class="my-3">🔒 Code de l'immeuble : <i>A6405</i> <br>interphone : <i>Arbarétier,
-                                    Espagnès, Roquette</i> <br>5ème étage gauche</div>
-                            <div class="my-3">🍸 Hards, vins, bières... sont les bienvenus.</div>
                         </div>
 
                     </div>
                 </div>
             </div>
+            <div class="modal micromodal-slide" id="modal-3" aria-hidden="true" style="color: black;">
+                <div class="modal__overlay" tabindex="-1" data-custom-close="modal-3">
+                    <div class="modal__container mx-2" role="dialog" aria-modal="true" aria-labelledby="modal-2-title"
+                        style="padding: 50px 10px;">
+                        <h5 class="mb-4">A completer</h5>
+                        <div style="text-align: left !important;">
+                        </div>
 
+                    </div>
+                </div>
+            </div>
+            <div class="modal micromodal-slide" id="modal-4" aria-hidden="true" style="color: black;">
+                <div class="modal__overlay" tabindex="-1" data-custom-close="modal-4">
+                    <div class="modal__container mx-2" role="dialog" aria-modal="true" aria-labelledby="modal-2-title"
+                        style="padding: 50px 10px;">
+                        <h5 class="mb-4">A completer</h5>
+                        <div style="text-align: left !important;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
             <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
                 <div class="modal__overlay" tabindex="-1" data-custom-close="modal-1">
