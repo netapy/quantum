@@ -49,17 +49,17 @@
         }
 
         .logoY {
-           max-width: 30%;
-           height: auto;
-           text-align: center;
-           opacity: .9;
-           margin-bottom: 30px;
+            max-width: 30%;
+            height: auto;
+            text-align: center;
+            opacity: .9;
+            margin-bottom: 30px;
         }
-        
+
         .sousTitrAnimal {
             opacity: .9;
             margin-bottom: 30px;
-            }
+        }
 
         @media screen and (max-width : 500px) {
             .titrAnimal {
@@ -101,18 +101,12 @@
     <div class="d-flex justify-content-center align-items-center flex-column h-100 w-100"
         style="z-index: 99; background: #ffffff15; position: fixed; top: 0;">
         <div class="text-center" style="color: white; margin-bottom: 20px;margin-top: 100px;">
-            <p id=="logoY"><img src="/Yesterday_400.png" alt="Yesterday"></p>
+            <p id=="logoY"><img src="Yesterday_400.png" alt="Yesterday" style="max-width: 90vw;"></p>
             <p id="countdown" style="opacity: 0; transition: all 1s ease-in-out;">aaa</p>
 
             <div style="width: 100%; padding: auto;">
                 <hr class="my-5" style="height: 2px; color: rgb(99, 99, 99); max-width: 300px; margin: auto;">
             </div>
-
-            <!--
-            <div data-custom-open="modal-2" class="btnInfo">
-                Informations
-            </div>
-        -->
 
             <div class="container" style=" transform: scale(0.80);">
                 <div class="row">
@@ -125,13 +119,19 @@
                     <div class="col-4 mb-5">
                         <div data-custom-open="modal-3" class="container btnIconQtn">
                             <img class="iconLogistique" src="icons/basic_compass.svg" alt="son">
-                            <div class="ecritureLogi">Informations sanitaires</div>
+                            <div class="text-center ecritureLogi">Accès</div>
                         </div>
                     </div>
                     <div class="col-4 mb-5">
                         <div data-custom-open="modal-1" class="container btnIconQtn">
                             <img class="iconLogistique" src="icons/music_playlist.svg" alt="son">
                             <div class="ecritureLogi">Playlist</div>
+                        </div>
+                    </div>
+                    <div class="col-4 mb-5">
+                        <div data-custom-open="modal-6" class="container btnIconQtn">
+                            <img class="iconLogistique" src="icons/music_playlist.svg" alt="son">
+                            <div class="ecritureLogi">Victuailles</div>
                         </div>
                     </div>
                     <div class="col-4">
@@ -179,22 +179,83 @@
                     </div>
                 </div>
             </div>
+            <script>
+                setTimeout(() => {
+                    MicroModal.show('modal-5');
+                }, 3000)
+            </script>
             <div class="modal micromodal-slide" id="modal-3" aria-hidden="true" style="color: black;">
                 <div class="modal__overlay" tabindex="-1" data-custom-close="modal-3">
-                    <div class="modal__container mx-2" role="dialog" aria-modal="true" aria-labelledby="modal-2-title"
-                       style="padding: 15px 30px 30px 15px; width: 600px;">
-                            <h4>🏥 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡𝗦 𝗦𝗔𝗡𝗜𝗧𝗔𝗜𝗥𝗘𝗦</h4>
-                            <span style="font-size: 0.8rem;">
-                                <p>▪️ Un pass sanitaire ( = schéma vaccinal complet ou PCR négatif < 24h) sera indispensable pour accéder à la soirée, 
-                                et sa validité sera contrôlée pour l’ensemble des invités.</p>
-                                <p>▪️ En cas d’évolution fortement défavorable de la situation sanitaire, un test PCR < 24h pourra être rendu obligatoire pour tous
-                                - nous vous en tiendrons informés en amont.</p>
-                                <p>▪️ Nous devrons malheureusement refuser l’accès en cas d’absence ou de non validité de votre pass. Ces mesures drastiques s’imposent à nous au regard du contexte sanitaire actuel ; nous comptons sur votre compréhension et votre coopération pour que cet événement ne subisse point le même sort que les deux précédents, ou ne fasse pas l’objet d’une parution dans la rubrique faits divers du journal local.</p>
+                    <div class="modal__container mx-2" role="dialog" aria-modal="true" aria-labelledby="modal-3-title"
+                        style="padding: 15px 30px 30px 15px; width: 600px;">
+                        <h4>🚊 𝗔𝗖𝗖𝗘𝗦</h4>
+                        <span class="text-left" style="font-size: 0.8rem; text-align: left;">
+                            <p>La soirée aura lieu au Mesnil-le-Roi (78), et l'adresse vous sera communiquée en temps
+                                voulu.</p>
+                            <p>▪️ Transports en commun :</p>
+                            <ol>
+                                <li>RER A/Transilien L à Maisons-Laffitte, ou RER A à St Germain en Laye</li>
+                                <li>8 minutes de bus - ligne 2 Transdev jusqu’à l’arrêt Belloy Parc ou Strasbourg
+                                    Paymal.</li>
+                                <li>3 minutes de marche</li>
+                            </ol>
+                            <p>▪️ Voiture : stationnement disponible en abondance pour vos carrosses (sous réserve de ne
+                                pas repartir alcoolisé)
+                            </p>
+                            <p>▪️ VTC : 5 minutes depuis les gares les plus proches - synchronisez-vous pour partager
+                                vos courses.</p>
+                            <p>En Uber (code uberpiguet pour ceux qui n'auraient pas encore créé de compte) = 5-6€ en
+                                Pool. En Bolt avec le code -5€ SWWRB = 1-2€.
+                                Des navettes pourront potentiellement être assurées par les berlines germaniques
+                                aperçues dans notre vidéo introductive.</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal micromodal-slide" id="modal-5" aria-hidden="true" style="color: black;">
+                <div class="modal__overlay" tabindex="-1" data-custom-close="modal-5">
+                    <div class="modal__container mx-2" role="dialog" aria-modal="true" aria-labelledby="modal-5-title"
+                        style="padding: 15px 30px 30px 15px; width: 600px;">
+                        <h4>🏥 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡𝗦 𝗦𝗔𝗡𝗜𝗧𝗔𝗜𝗥𝗘𝗦</h4>
+                        <span style="font-size: 0.8rem;">
+                            <p>▪️ Un pass sanitaire ( = schéma vaccinal complet ou PCR négatif < 24h) sera indispensable
+                                    pour accéder à la soirée, et sa validité sera contrôlée pour l’ensemble des
+                                    invités.</p> <p>▪️ En cas d’évolution fortement défavorable de la situation
+                                    sanitaire, un test PCR < 24h pourra être rendu obligatoire pour tous - nous vous en
+                                        tiendrons informés en amont.</p> <p>▪️ Nous devrons malheureusement refuser
+                                        l’accès en cas d’absence ou de non validité de votre pass. Ces mesures
+                                        drastiques s’imposent à nous au regard du contexte sanitaire actuel ; nous
+                                        comptons sur votre compréhension et votre coopération pour que cet événement ne
+                                        subisse point le même sort que les deux précédents, ou ne fasse pas l’objet
+                                        d’une parution dans la rubrique faits divers du journal local.</p>
+                        </span>
+                        <button class="btn btnPrimary" style="color:green;"
+                            onclick="MicroModal.close('modal-5');">J'accepte</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal micromodal-slide" id="modal-6" aria-hidden="true" style="color: black;">
+                <div class="modal__overlay" tabindex="-1" data-custom-close="modal-6">
+                    <div class="modal__container mx-2" role="dialog" aria-modal="true" aria-labelledby="modal-6-title"
+                        style="padding: 15px 30px 30px 15px; width: 600px;">
+                        <div class="mb-1">
+                            <h4>🍾 𝗩𝗜𝗖𝗧𝗨𝗔𝗜𝗟𝗟𝗘𝗦</h4>
+                            <span style="font-size: 0.8rem; text-align: left;">
+                                <p>➡️ Nous posterons des sondages le moment venu, abusons de tout et ne manquons de
+                                    rien.</p>
+                                <p>
+                                    ▪️ Boire : Alcool. à. flots. Cible : 1 bouteille d'alcool pour 2. Cristal, Vodka, Whisky, Rhum, Tequila, Martini, Vin, Bière. Et du soft pour accompagner tout cela.</p>
+                                <p>
+                                    ▪️ Manger : Chips, plats, desserts – manger c’est certes tricher, mais nous comptons
+                                    sur vous.</p>
+                                <p>➡️ Vos hôtes refuseront l'admission à celles et ceux qui viendraient les mains vides.
+                                </p>
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="modal micromodal-slide" id="modal-4" aria-hidden="true" style="color: black;">
                 <div class="modal__overlay" tabindex="-1" data-custom-close="modal-4">
                     <div class="modal__container mx-2" role="dialog" aria-modal="true" aria-labelledby="modal-2-title"
@@ -210,7 +271,7 @@
             <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
                 <div class="modal__overlay" tabindex="-1" data-custom-close="modal-1">
                     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                        <div style="padding: 15px 5px;">
+                        <div class="text-center" style="padding: 15px 5px;">
                             <form id="my-form" target="my-response-iframe"
                                 action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdyJ_noktrBO9XkOZPDAhYNgwJ8RV5-kiTWebhMzFeOhIat-g/formResponse"
                                 method="post">
@@ -237,7 +298,7 @@
                                     </div>
                                     <div class="col-12 my-2">
                                         <input type="submit"
-                                            style="padding: 15px 8px; border-radius: 10px; border-width: 0px; background-color: rgb(216, 216, 216);"
+                                            style="padding: 8px 18px; border-radius: 10px; border-width: 0px; background-color: rgb(216, 216, 216);"
                                             value="Ajouter">
                                     </div>
                                 </div>
